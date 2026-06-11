@@ -29,8 +29,58 @@ W3PIViewer Contract:
 W3PI Core BscScan:
 https://bscscan.com/address/0x2ba78a103318bd4e3db45186113527651bb8dcca
 
+W3PI Token BscScan:
+https://bscscan.com/token/0x2ba78a103318bd4e3db45186113527651bb8dcca
+
 W3PIViewer BscScan:
 https://bscscan.com/address/0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
+```
+
+## Public Repository Evidence
+
+```text
+GitHub repository:
+https://github.com/W3PI-Protocol/w3pi-contracts
+
+Official contract registry:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/CONTRACTS.md
+
+Deployment notes:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/DEPLOYMENT.md
+
+Verification guide:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/VERIFICATION.md
+
+Project metadata:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/METADATA.md
+
+Disclaimer:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/DISCLAIMER.md
+```
+
+## Brand and Wallet Metadata
+
+```text
+Primary logo:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/assets/logo.png
+
+SVG logo:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/assets/logo.svg
+
+32x32 logo:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/assets/logo-32.png
+
+256x256 logo:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/assets/logo-256.png
+
+512x512 logo:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/assets/logo-512.png
+
+Trust Wallet prepared asset:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/trustwallet/blockchains/smartchain/assets/0x2bA78a103318bd4E3db45186113527651bB8DcCA/logo.png
+
+Trust Wallet prepared info.json:
+https://raw.githubusercontent.com/W3PI-Protocol/w3pi-contracts/main/trustwallet/blockchains/smartchain/assets/0x2bA78a103318bd4E3db45186113527651bB8DcCA/info.json
 ```
 
 ## Contract Design Summary
@@ -104,7 +154,14 @@ No blacklist
 No pause function
 No owner-controlled fee changes
 No upgrade proxy
+Public logo and token metadata assets
 ```
+
+## Important Safety Notice
+
+W3PI does not ask users to disable wallet security warnings.
+
+If a wallet security warning appears, users should not ignore it blindly. The project team should submit official review or false-positive correction requests through the relevant wallet or security vendor channels.
 
 ## Disclaimer
 

@@ -1,8 +1,35 @@
 # W3PI Contracts
 
-W3PI is an ownerless Web3 + Pi themed BEP-20 protocol designed for BNB Smart Chain.
+W3PI is an ownerless Web3 + Pi themed BEP-20 protocol deployed on BNB Smart Chain Mainnet.
 
 The protocol uses the mathematical Pi theme symbolically. W3PI is not affiliated with Pi Network, Pi Coin, or any other Pi-branded blockchain, company, foundation, or project.
+
+## Official Deployment
+
+### Network
+
+```text
+BNB Smart Chain Mainnet
+Chain ID: 56
+```
+
+### W3PI Core Contract
+
+```text
+Status: Deployed and source-code verified
+Address: 0x2ba78a103318bd4e3db45186113527651bb8dcca
+Deploy transaction: 0x61b95fac616ec11d733cf62e28c59e9f2c67f30bc79cd31941df7b352100510f
+BscScan: https://bscscan.com/address/0x2ba78a103318bd4e3db45186113527651bb8dcca
+```
+
+### W3PIViewer Contract
+
+```text
+Status: Deployed and source-code verified
+Address: 0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
+Deploy transaction: 0xfa5c12c14bc462ef72271535e5a0af7bc77f08a3f97aa0285db96f3e8776de75
+BscScan: https://bscscan.com/address/0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
+```
 
 ## Repository Structure
 
@@ -17,6 +44,14 @@ CONTRACTS.md
 docs/DISCLAIMER.md
 docs/VERIFICATION.md
 ```
+
+## Repository Documents
+
+* [CONTRACTS.md](CONTRACTS.md) - Official W3PI contract address registry
+* [DEPLOYMENT.md](DEPLOYMENT.md) - Deployment configuration and quote token whitelist
+* [SECURITY.md](SECURITY.md) - Security reporting policy
+* [docs/VERIFICATION.md](docs/VERIFICATION.md) - Contract verification guide
+* [docs/DISCLAIMER.md](docs/DISCLAIMER.md) - General risk and affiliation disclaimer
 
 ## Core Design
 
@@ -78,27 +113,13 @@ Does not increase referral entitlement
 
 It is a permanent token burn mechanism.
 
-## Deployment and Verification
-
-Official deployed contract addresses will be published after BNB Smart Chain mainnet deployment and source verification.
-
-Useful documents:
-
-```text
-CONTRACTS.md - Official contract address registry
-DEPLOYMENT.md - Deployment configuration and quote token whitelist
-SECURITY.md - Security reporting policy
-docs/VERIFICATION.md - Contract verification guide
-docs/DISCLAIMER.md - General risk and affiliation disclaimer
-```
-
-Always verify contract addresses from the official website, this repository, and BscScan before interacting with the protocol.
-
-Official website:
+## Official Website
 
 ```text
 https://w3pi.social
 ```
+
+Always verify contract addresses from the official website, this repository, and BscScan before interacting with the protocol.
 
 ## Disclaimer
 

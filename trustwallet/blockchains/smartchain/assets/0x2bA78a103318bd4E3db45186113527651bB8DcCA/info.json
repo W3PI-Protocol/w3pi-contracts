@@ -1,0 +1,36 @@
+{
+  "name": "W3PI",
+  "website": "https://w3pi.social",
+  "description": "W3PI is an ownerless Web3 + Pi themed BEP-20 protocol deployed on BNB Smart Chain Mainnet. The Pi reference is mathematical and symbolic. W3PI is not affiliated with Pi Network, Pi Coin, or any other Pi-branded blockchain, company, foundation, or project.",
+  "explorer": "https://bscscan.com/token/0x2ba78a103318bd4e3db45186113527651bb8dcca",
+  "type": "BEP20",
+  "symbol": "W3PI",
+  "decimals": 18,
+  "status": "active",
+  "id": "0x2bA78a103318bd4E3db45186113527651bB8DcCA",
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/W3PI-Protocol/w3pi-contracts"
+    },
+    {
+      "name": "x",
+      "url": "https://x.com/W3PIOfficial"
+    },
+    {
+      "name": "telegram",
+      "url": "https://t.me/W3PI_Chat"
+    },
+    {
+      "name": "telegram_news",
+      "url": "https://t.me/W3PIOfficial"
+    },
+    {
+      "name": "source_code",
+      "url": "https://github.com/W3PI-Protocol/w3pi-contracts"
+    }
+  ],
+  "tags": [
+    "defi"
+  ]
+}

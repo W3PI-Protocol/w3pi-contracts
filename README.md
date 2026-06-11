@@ -4,21 +4,18 @@ W3PI is an ownerless Web3 + Pi themed BEP-20 protocol designed for BNB Smart Cha
 
 The protocol uses the mathematical Pi theme symbolically. W3PI is not affiliated with Pi Network, Pi Coin, or any other Pi-branded blockchain, company, foundation, or project.
 
-## Repository Documents
+## Repository Structure
 
 ```text
-Contracts:
 contracts/W3PI_Core.sol
 contracts/W3PIViewer.sol
 
-Security policy:
 SECURITY.md
-
-Deployment notes:
 DEPLOYMENT.md
-
-Official contract registry:
 CONTRACTS.md
+
+docs/DISCLAIMER.md
+docs/VERIFICATION.md
 ```
 
 ## Core Design
@@ -81,9 +78,19 @@ Does not increase referral entitlement
 
 It is a permanent token burn mechanism.
 
-## Deployment
+## Deployment and Verification
 
 Official deployed contract addresses will be published after BNB Smart Chain mainnet deployment and source verification.
+
+Useful documents:
+
+```text
+CONTRACTS.md - Official contract address registry
+DEPLOYMENT.md - Deployment configuration and quote token whitelist
+SECURITY.md - Security reporting policy
+docs/VERIFICATION.md - Contract verification guide
+docs/DISCLAIMER.md - General risk and affiliation disclaimer
+```
 
 Always verify contract addresses from the official website, this repository, and BscScan before interacting with the protocol.
 
@@ -95,7 +102,7 @@ https://w3pi.social
 
 ## Disclaimer
 
-W3PI does not guarantee profit, token price appreciation, liquidity, exchange listings, or market value.
+W3PI does not guarantee profit, token price appreciation, liquidity, exchange listings, trading volume, market value, or user rewards in fiat value.
 
 All smart contract interactions involve risk. Users should review the source code, understand the protocol mechanics, and use their own judgment before interacting with any contract.
 

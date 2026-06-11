@@ -11,19 +11,42 @@ Official website:
 https://w3pi.social
 
 Official GitHub repository:
-W3PI-Protocol/w3pi-contracts
+https://github.com/W3PI-Protocol/w3pi-contracts
 
 BscScan verified source code:
-To be published after mainnet deployment
+https://bscscan.com/address/0x2ba78a103318bd4e3db45186113527651bb8dcca
+https://bscscan.com/address/0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
 ```
 
 ## Official Contracts
 
-The official deployed contract addresses will be listed in:
+The official deployed W3PI contracts on BNB Smart Chain Mainnet are:
 
 ```text
-CONTRACTS.md
+W3PI Core Contract:
+0x2ba78a103318bd4e3db45186113527651bb8dcca
+
+W3PIViewer Contract:
+0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
 ```
+
+## BscScan Verification
+
+Both official contracts are deployed and source-code verified on BscScan.
+
+```text
+W3PI Core Contract:
+Status: Deployed and source-code verified
+BscScan: https://bscscan.com/address/0x2ba78a103318bd4e3db45186113527651bb8dcca
+Deploy transaction: https://bscscan.com/tx/0x61b95fac616ec11d733cf62e28c59e9f2c67f30bc79cd31941df7b352100510f
+
+W3PIViewer Contract:
+Status: Deployed and source-code verified
+BscScan: https://bscscan.com/address/0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
+Deploy transaction: https://bscscan.com/tx/0xfa5c12c14bc462ef72271535e5a0af7bc77f08a3f97aa0285db96f3e8776de75
+```
+
+## Address Matching Checklist
 
 Before interacting with W3PI contracts, users should confirm that the same addresses are visible on:
 
@@ -33,15 +56,30 @@ Official GitHub repository
 BscScan verified contract pages
 ```
 
+The contract addresses should match exactly:
+
+```text
+Core:
+0x2ba78a103318bd4e3db45186113527651bb8dcca
+
+Viewer:
+0xb1fEA36eAcCcF976e990f9d01f3768c9b9EC0e0B
+```
+
 ## Source Code Verification
 
-After deployment, the W3PI core contract and W3PIViewer contract should be verified and published on BscScan.
+The source code published on BscScan should match the source code in this repository:
 
-The source code published on BscScan should match the source code in this repository.
+```text
+contracts/W3PI_Core.sol
+contracts/W3PIViewer.sol
+```
+
+Users should review the verified BscScan source code and compare it with this repository before interacting with the protocol.
 
 ## Deployment Transparency
 
-The intended BNB Smart Chain deployment configuration is documented in:
+The official BNB Smart Chain deployment configuration is documented in:
 
 ```text
 DEPLOYMENT.md
@@ -54,7 +92,8 @@ BNB Smart Chain network details
 PancakeSwap V2 router address
 PancakeSwap V2 factory address
 Quote token whitelist
-Recommended deployment order
+Official deployed contract addresses
+Deployment transaction hashes
 ```
 
 ## Important Safety Notice
@@ -76,4 +115,6 @@ Always verify addresses from the official website, this repository, and BscScan.
 
 Verification helps reduce the risk of interacting with fake contracts, but it does not remove smart contract, market, liquidity, wallet, or blockchain risks.
 
-W3PI does not guarantee profit, token price appreciation, liquidity, exchange listings, trading volume, or market value.
+W3PI does not guarantee profit, token price appreciation, liquidity, exchange listings, trading volume, market value, or user rewards in fiat value.
+
+W3PI is not affiliated with Pi Network, Pi Coin, or any other Pi-branded blockchain, company, foundation, or project.

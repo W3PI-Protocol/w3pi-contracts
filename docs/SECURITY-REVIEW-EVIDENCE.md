@@ -79,6 +79,9 @@ https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/BRAND-ASSETS.md
 
 Disclaimer:
 https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/DISCLAIMER.md
+
+GoPlus token security scan snapshot:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/scans/goplus-token-security-w3pi-snapshot.pdf
 ```
 
 ## Brand and Wallet Metadata
@@ -206,11 +209,14 @@ Sell Test:
 
 External Market Buy Observed:
 0x9f58fe2d7c537ea8494ac57052fa3aa920dec74d387e2458dd3ceba6054d34cf
+
+Additional External Market Buy Observed:
+0x87e8067911c485339266af3f5ee841d1d8583dc5bf75558e61439b049649f786
 ```
 
 The buy and sell test transactions verified that the fixed AMM trading burn works on recognized AMM transfers.
 
-An external market buy was also observed after the initial AMM burn verification, and the AMM burn behavior remained consistent.
+External market buys were also observed after the initial AMM burn verification, and the AMM burn behavior remained consistent.
 
 Full details are published in:
 
@@ -274,6 +280,51 @@ Full details are published in:
 https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/ALLOCATIONS.md
 ```
 
+## Automated Token Security Scan Snapshot
+
+A GoPlus automated token security scan snapshot was saved as supporting evidence for the W3PI Core contract.
+
+```text
+GoPlus scan page:
+https://console.gopluslabs.io/token-security/56/0x2ba78a103318bd4e3db45186113527651bb8dcca
+
+Snapshot file:
+https://github.com/W3PI-Protocol/w3pi-contracts/blob/main/docs/scans/goplus-token-security-w3pi-snapshot.pdf
+```
+
+The snapshot reported:
+
+```text
+Risky item: 0
+Attention item: 0
+Contract source code verified
+No proxy
+No mint function
+No ownership retrieval function found
+Owner cannot change balances
+No hidden owner
+No self-destruct function found
+No external call risk found
+No gas abuse activity found
+Not a honeypot
+No code found to suspend trading
+Holders can sell all tokens
+The token can be bought
+No trading cooldown function
+No anti-whale transaction limit
+Tax cannot be modified
+No blacklist
+No whitelist
+No personal address tax changes found
+Owner holdings: 0 W3PI / 0.00%
+Creator holdings: 100 W3PI / 0.01%
+LP locked/burned: 100%
+```
+
+This is an automated token security scan snapshot, not a manual audit. It is provided as supporting scanner evidence only.
+
+The GoPlus scanner displayed `Buy Tax: 3.00%`, `Sell Tax: 1.32%`, and `Transfer Tax: 0.00%`. The sell tax value appears to be an automated simulation estimate and does not match the observed on-chain AMM burn behavior. W3PI's registered AMM pair transfers apply a fixed `3%` token burn on recognized AMM buy-side and sell-side transfers, while normal wallet-to-wallet transfers have `0%` transfer tax. The verified AMM burn transactions in the Transparency Record should be used as the source of truth for W3PI's AMM burn behavior.
+
 ## Official Communication Channels
 
 ```text
@@ -316,6 +367,45 @@ https://bscscan.com/address/0x2ba78a103318bd4e3db45186113527651bb8dcca#code
 
 If a scanner shows an ownership warning based only on a missing standard `renounceOwnership()` pattern, the W3PI team requests a manual review of the actual privileged capabilities. The deployed W3PI Core contract is designed without admin mint, blacklist, pause, owner-controlled tax changes, privileged balance modification, upgrade proxy, or ownership regain mechanism.
 
+Current scanner follow-up context:
+
+```text
+HashDit / RedAlarm:
+A manual refresh / false-positive follow-up was submitted because the scanner still displayed an outdated Unverified Contract Source Code warning even though the W3PI Core contract is verified on BscScan. The follow-up also referenced Blockaid ticket 1281934.
+
+PancakeSwap:
+The PancakeSwap warning is expected to be related to HashDit / RedAlarm third-party scanner data and may change after HashDit refreshes its result.
+
+DappBay / GoPlus:
+If an Ownership Not Renounced alert appears, W3PI requests review based on actual privileged capabilities, because the contract has no admin mint, blacklist, owner-controlled tax modification, privileged balance modification, transfer pause, upgrade proxy, or ownership regain mechanism.
+```
+
+## Blockaid False-Positive Review Result
+
+Blockaid Security Team completed a manual review for the W3PI Core contract and confirmed that the previous flagging was incorrect.
+
+```text
+Blockaid ticket ID:
+1281934
+
+Reviewed contract:
+0x2ba78a103318bd4e3db45186113527651bb8dcca
+
+Review result:
+Flagging was incorrect and has been modified accordingly.
+
+Propagation note:
+Blockaid noted that the fix may take up to 24 hours to fully propagate across all systems.
+```
+
+After this correction, MetaMask warnings observed on w3pi.social interactions were reduced from stronger malicious/risky warnings to a softer address verification warning:
+
+```text
+We can't verify this address. It may be new or unverified. Only continue if you trust the source.
+```
+
+Trust Wallet and other wallet or scanner interfaces may still show cached or third-party scanner warnings until their own data sources refresh. W3PI does not ask users to bypass wallet warnings and continues to use official review channels for false-positive correction requests.
+
 ## False Positive Review Note
 
 If W3PI, w3pi.social, or the official contract addresses are classified as suspicious, phishing, wallet-draining, or malicious by a wallet security system or third-party scanner, the W3PI team requests a manual false-positive review.
@@ -343,6 +433,8 @@ No owner-controlled fee changes
 No privileged balance modification
 No upgrade proxy
 Public logo and token metadata assets
+Blockaid false-positive correction, ticket 1281934
+GoPlus automated token security scan snapshot showing Risky item 0 and Attention item 0
 ```
 
 ## Important Safety Notice
